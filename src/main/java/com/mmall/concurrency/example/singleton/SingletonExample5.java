@@ -25,8 +25,7 @@ public class SingletonExample5 {
    // 2.ctorInstance() 初始化对象
    // 3.Instance = memory 设置instance 指向刚分配的内存
 
-    // JVM和CPU优化，发生了指令重排
-    //单例对象
+    //单例对象 volatile + 双重检测机制 - 》 进制指令重排
     private volatile static SingletonExample5 instance = null;
 
     //静态的工厂方法
